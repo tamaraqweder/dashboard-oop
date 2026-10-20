@@ -2,15 +2,13 @@
 require "classes/database.php";
 require "classes/user.php";
 
-
 $database=new Database();
 $conn=$database->connect();
 
 $userObject=new User($conn); //عشان ابني اوبجكت وامرر اله الاتصال
 
-
-
-if(isset($_POST["add_user"])){
+if(isset($_POST["add_user"]))
+  {
      $name=$_POST["name"];
      $email = $_POST["email"];
      $password = $_POST["password"];
@@ -21,14 +19,10 @@ if(isset($_POST["add_user"])){
        exit;
 }
 
-
-
 ?>
 
 
 <h1>Add User </h1>
-
-
 
 <form method="POST" action="">
 
